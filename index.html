@@ -1,8 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  МЕТА-ТЕГИ ДЛЯ КРАСИВОЙ ССЫЛКИ В ТЕЛЕГРАМЕ/WHATSAPP -->
+<meta property="og:title" content="Li Wei | Цигун + Кум Нье">
+<meta property="og:description" content="30 лет практики. Мягко. Безопасно. Без таблеток. Практическое руководство «Аптечка от тревоги».">
+<meta property="og:image" content="https://i.postimg.cc/T3g887XS/Li-Wei-Master-Sujok-Reference-jpg.png">
+<meta property="og:url" content="https://genius333.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
 <title>Li Wei | Цигун + Кум Нье</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,7 +25,7 @@ content:'';position:fixed;top:0;left:0;width:100%;height:100%;
 background-image: 
 radial-gradient(circle at 20% 50%,rgba(139,0,0,0.1) 0%,transparent 50%),
 radial-gradient(circle at 80% 80%,rgba(196,30,58,0.1) 0%,transparent 50%),
-url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='none' stroke='rgba(255,215,0,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='none' stroke='rgba(255,215,0,0.05)' stroke-width='1'/%3E%3C/svg%3E");
 pointer-events:none;z-index:-2
 }
 
@@ -37,10 +47,20 @@ pointer-events:none;z-index:-2
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
 .container{max-width:900px;text-align:center;z-index:1;background:rgba(22,33,62,0.8);backdrop-filter:blur(10px);border-radius:30px;padding:40px 20px;border:2px solid rgba(255,215,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
 
-/* Avatar with Chinese Frame */
-.avatar-frame{position:relative;display:inline-block;margin-bottom:20px}
-.avatar{width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid var(--accent);box-shadow:0 10px 40px rgba(255,215,0,0.4),inset 0 0 20px rgba(139,0,0,0.3);animation:pulse 3s ease-in-out infinite;position:relative;z-index:1}
-.avatar-frame::before{content:'☯';position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:3rem;color:var(--accent);opacity:0.8;animation:rotate 20s linear infinite}
+/* Avatar with Chinese Frame - ИСПРАВЛЕНО ДЛЯ ГОЛОВЫ */
+.avatar-frame{position:relative;display:inline-block;margin-bottom:20px; padding-top: 30px;}.avatar{
+  width:180px;
+  height:240px; /* Увеличил высоту, чтобы влезла голова */
+  border-radius:50%;
+  object-fit:cover;
+  object-position: center 15%; /* Сместил фокус чуть вверх, чтобы показать лицо */
+  border:5px solid var(--accent);
+  box-shadow:0 10px 40px rgba(255,215,0,0.4),inset 0 0 20px rgba(139,0,0,0.3);
+  animation:pulse 3s ease-in-out infinite;
+  position:relative;
+  z-index:1
+}
+.avatar-frame::before{content:'☯';position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:3rem;color:var(--accent);opacity:0.8;animation:rotate 20s linear infinite}
 @keyframes rotate{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 
@@ -48,6 +68,7 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .chinese-char{font-size:2rem;color:var(--accent);opacity:0.8;margin-bottom:20px;letter-spacing:10px}
 .subtitle{font-size:1.3rem;color:var(--sakura);margin-bottom:30px}
 .tagline{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:20px 40px;border-radius:50px;display:inline-block;margin-bottom:30px;font-size:1.2rem;box-shadow:0 10px 30px rgba(139,0,0,0.4);border:2px solid var(--accent)}
+
 /* Chinese Metaphors Section */
 .metaphors{display:flex;justify-content:center;gap:30px;margin:40px 0;flex-wrap:wrap}
 .metaphor-item{text-align:center}
@@ -72,12 +93,11 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .about-block p{line-height:1.8;opacity:0.9;margin-bottom:10px}
 .about-block ul{list-style:none;padding-left:0}
 .about-block ul li{padding:8px 0;padding-left:25px;position:relative;opacity:0.9}
-.about-block ul li::before{content:'▸';color:var(--accent);position:absolute;left:0;font-weight:bold}
+.about-block ul li::before{content:'';color:var(--accent);position:absolute;left:0;font-weight:bold}
 .philosophy-quote{background:rgba(255,215,0,0.1);border-left:4px solid var(--accent);padding:20px 30px;border-radius:10px;margin:30px 0;font-style:italic;font-size:1.2rem;color:var(--accent);text-align:center}
 
 .offer{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:50px 30px;border-radius:30px;margin:50px 0;box-shadow:0 15px 50px rgba(139,0,0,0.5);border:3px solid var(--accent);position:relative;overflow:hidden}
-.offer::before{content:'📚';position:absolute;top:20px;right:20px;font-size:4rem;opacity:0.2}
-.offer h2{font-size:2.5rem;margin-bottom:20px}
+.offer::before{content:'📚';position:absolute;top:20px;right:20px;font-size:4rem;opacity:0.2}.offer h2{font-size:2.5rem;margin-bottom:20px}
 .offer p{font-size:1.2rem;margin-bottom:30px;opacity:0.95}
 .btn{background:var(--accent);color:var(--primary);padding:18px 50px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.3);font-size:1.1rem;border:2px solid transparent}
 .btn:hover{transform:scale(1.05);box-shadow:0 12px 35px rgba(0,0,0,0.4);background:#fff}
@@ -96,7 +116,8 @@ footer{text-align:center;padding:40px;color:var(--sakura);opacity:0.7;border-top
 .chinese-footer{font-size:2rem;margin-bottom:10px;opacity:0.5}
 
 @media(max-width:768px){
-h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
+h1{font-size:2rem}
+.chinese-char{font-size:1.5rem;letter-spacing:5px}
 .features{grid-template-columns:1fr}
 .stats{flex-direction:column}
 .container{padding:30px 15px}
@@ -125,8 +146,7 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 </div>
 
 <h1>Li Wei</h1>
-<div class="chinese-char">李伟</div>
-<p class="subtitle">Цигун + Кум Нье</p>
+<div class="chinese-char">李伟</div><p class="subtitle">Цигун + Кум Нье</p>
 <div class="tagline">🍃 Хорошо находиться в движении. Это. Безопасно. Без таблеток.</div>
 
 <!-- Chinese Metaphors -->
@@ -136,7 +156,7 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 <span class="metaphor-text">Инь и Ян<br>Гармония противоположностей</span>
 </div>
 <div class="metaphor-item">
-<span class="metaphor-symbol">🎋</span>
+<span class="metaphor-symbol"></span>
 <span class="metaphor-text">Бамбук<br>Гибкость и сила</span>
 </div>
 <div class="metaphor-item">
@@ -145,7 +165,8 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 </div>
 </div>
 
-<div class="features"><div class="feature">
+<div class="features">
+<div class="feature">
 <span class="feature-icon">🧘</span>
 <h3>Цигун</h3>
 <p>Древняя практика для гармонии тела и духа. Движение, дыхание, внимание.</p>
@@ -175,7 +196,6 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 <h3>Как я пришёл к практикам</h3>
 <p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
 </div>
-
 <div class="about-block">
 <h3>Почему я веду блог</h3>
 <p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
@@ -195,6 +215,7 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 <p style="text-align:right;margin-top:20px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
 </div>
 </div>
+
 <div class="offer">
 <h2>📚 Мини-книга «Аптечка от тревоги»</h2>
 <p>Практическое руководство о том, как справиться с тревогой естественно<br>Без таблеток. Без сложных теорий. Только работающие техники.</p>
@@ -223,8 +244,7 @@ h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
 
 <footer>
 <div class="chinese-footer">☯  🌸</div>
-<p>© 2026 Li Wei | 李伟 | Здоровье естественным путём</p>
-<p style="margin-top:10px;font-size:0.9rem">气功 + སྐུ་མཉེ</p>
+<p>© 2026 Li Wei | 李伟 | Здоровье естественным путём</p><p style="margin-top:10px;font-size:0.9rem">气功 + ྐུ་མཉེ</p>
 </footer>
 </div>
 </section>
