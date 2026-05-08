@@ -43,7 +43,7 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .chinese-char{font-size:2rem;color:var(--accent);opacity:0.8;margin-bottom:15px;letter-spacing:8px}
 .subtitle{font-size:1.3rem;color:var(--sakura);margin-bottom:25px}
 
-/* Блок Обо Мне - С ПОЛНЫМ ТЕКСТОМ */
+/* Блок Обо Мне */
 .about-section{
   background:rgba(255,255,255,0.06); 
   padding:25px 20px; 
@@ -59,7 +59,6 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .about-block ul{list-style:none;padding-left:0}
 .about-block ul li{padding:5px 0 5px 20px;position:relative;font-size:0.95rem;opacity:0.9}
 .about-block ul li::before{content:'✦';color:var(--accent);position:absolute;left:0}
-.philosophy-quote{background:rgba(139,0,0,0.2);padding:15px;border-radius:10px;border-left:3px solid var(--accent);font-style:italic;margin:20px 0;color:var(--accent)}
 
 /* Красный блок с цитатой */
 .tagline{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:18px 25px;border-radius:50px;display:inline-block;margin-bottom:30px;font-size:1.05rem;box-shadow:0 8px 25px rgba(139,0,0,0.5);border:2px solid var(--accent)}
@@ -96,8 +95,8 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .telegram a{color:#fff;font-weight:700;text-decoration:underline}
 footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 
-@media(max-width:768px){h1{font-size:2.2rem}
-.features{grid-template-columns:1fr}
+@media(max-width:768px){
+h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 .stats{flex-direction:column}
 .container{padding:30px 15px}
 }
@@ -122,7 +121,7 @@ footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 <div class="chinese-char">李伟</div>
 <p class="subtitle">Цигун + Кум Нье</p>
 
-<!-- ✅ БЛОК "ОБО МНЕ" С ПОЛНЫМ ТЕКСТОМ -->
+<!-- ✅ БЛОК "ОБО МНЕ" (БЕЗ ЦИТАТЫ ВНУТРИ) -->
 <div class="about-section">
 <h2>🎋 Обо Мне</h2>
 
@@ -148,7 +147,6 @@ footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 </div>
 <div class="about-block">
 <h3>Моя философия</h3>
-<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div>
 <p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
 <p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
 <p style="text-align:right;margin-top:10px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
@@ -156,7 +154,7 @@ footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 </div>
 <!-- КОНЕЦ БЛОКА ОБО МНЕ -->
 
-<!-- Красный блок с цитатой -->
+<!-- ✅ КРАСНЫЙ БЛОК С ЦИТАТОЙ (ОСТАЛСЯ ТОЛЬКО ОДИН) -->
 <div class="tagline">🍃 Хорошо находиться в движении. Это. Безопасно. Без таблеток.</div>
 
 <div class="metaphors">
@@ -177,7 +175,7 @@ footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 <a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
 </div>
 
-<!-- ✅ СТАТИСТИКА (ПОДПИСЧИКИ НА МЕСТЕ) -->
+<!-- ✅ СТАТИСТИКА -->
 <div class="stats">
 <div class="stat-item"><div class="stat-number">15</div><div class="stat-label">Постов</div></div>
 <div class="stat-item"><div class="stat-number">215</div><div class="stat-label">Подписчиков</div></div>
@@ -194,4 +192,5 @@ footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 </footer>
 </div>
 </section>
-</body></html>
+</body>
+</html>
