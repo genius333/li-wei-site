@@ -6,69 +6,199 @@
 <title>Li Wei | Цигун + Кум Нье</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#2d6a4f;--secondary:#52b788;--accent:#74c69d;--bg:#d8f3dc;--text:#1b4332;--light:#b7e4c7}
+:root{--primary:#8b0000;--secondary:#c41e3a;--accent:#ffd700;--bg:#1a1a2e;--text:#f5f5f5;--light:#16213e;--sakura:#ffb7c5}
 body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(135deg,var(--bg) 0%,var(--light) 100%);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:200%;height:200%;background:radial-gradient(circle,rgba(116,198,157,0.2) 0%,transparent 70%);animation:float 20s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-50px)}}
-.container{max-width:800px;text-align:center;z-index:1}
-.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid var(--secondary);box-shadow:0 10px 40px rgba(45,106,79,0.3);margin-bottom:20px;animation:pulse 3s ease-in-out infinite}
+
+/* Chinese Pattern Background */
+body::before{
+content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+background-image: 
+radial-gradient(circle at 20% 50%,rgba(139,0,0,0.1) 0%,transparent 50%),
+radial-gradient(circle at 80% 80%,rgba(196,30,58,0.1) 0%,transparent 50%),
+url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath d='M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z' fill='none' stroke='rgba(255,215,0,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+pointer-events:none;z-index:-2
+}
+
+/* Sakura Petals Animation */
+.sakura-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1;overflow:hidden}
+.petal{position:absolute;top:-10%;width:15px;height:15px;background:linear-gradient(135deg,var(--sakura),#ffc0cb);border-radius:50% 0 50% 50%;transform:rotate(45deg);animation:fall linear infinite;opacity:0.6}
+.petal:nth-child(1){left:10%;animation-duration:15s;animation-delay:0s}
+.petal:nth-child(2){left:20%;animation-duration:18s;animation-delay:2s}
+.petal:nth-child(3){left:35%;animation-duration:16s;animation-delay:4s}
+.petal:nth-child(4){left:50%;animation-duration:20s;animation-delay:1s}
+.petal:nth-child(5){left:65%;animation-duration:17s;animation-delay:3s}
+.petal:nth-child(6){left:80%;animation-duration:19s;animation-delay:5s}
+.petal:nth-child(7){left:90%;animation-duration:14s;animation-delay:2s}
+@keyframes fall{0%{transform:translateY(-100px) rotate(45deg) translateX(0)}50%{transform:translateY(50vh) rotate(225deg) translateX(100px)}100%{transform:translateY(calc(100vh + 100px)) rotate(405deg) translateX(0)}}
+
+/* Temple Silhouette */
+.temple-bg{position:fixed;bottom:0;right:0;width:400px;height:400px;opacity:0.05;z-index:-2;pointer-events:none}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
+.container{max-width:900px;text-align:center;z-index:1;background:rgba(22,33,62,0.8);backdrop-filter:blur(10px);border-radius:30px;padding:40px 20px;border:2px solid rgba(255,215,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+
+/* Avatar with Chinese Frame */
+.avatar-frame{position:relative;display:inline-block;margin-bottom:20px}
+.avatar{width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid var(--accent);box-shadow:0 10px 40px rgba(255,215,0,0.4),inset 0 0 20px rgba(139,0,0,0.3);animation:pulse 3s ease-in-out infinite;position:relative;z-index:1}
+.avatar-frame::before{content:'☯';position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:3rem;color:var(--accent);opacity:0.8;animation:rotate 20s linear infinite}
+@keyframes rotate{from{transform:translateX(-50%) rotate(0deg)}to{transform:translateX(-50%) rotate(360deg)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-h1{font-size:2.5rem;margin-bottom:10px;color:var(--primary);font-weight:700}
-.subtitle{font-size:1.2rem;color:var(--text);opacity:0.8;margin-bottom:30px}
-.tagline{background:var(--primary);color:#fff;padding:15px 30px;border-radius:50px;display:inline-block;margin-bottom:30px;font-size:1.1rem;box-shadow:0 5px 20px rgba(45,106,79,0.3)}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:40px 0}
-.feature{background:#fff;padding:30px 20px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,0.1);transition:transform 0.3s,box-shadow 0.3s}
-.feature:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(45,106,79,0.2)}
-.feature-icon{font-size:3rem;margin-bottom:15px}
-.feature h3{color:var(--primary);margin-bottom:10px}
-.offer{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:40px 30px;border-radius:30px;margin:40px 0;box-shadow:0 10px 40px rgba(45,106,79,0.3)}
-.offer h2{font-size:2rem;margin-bottom:15px}
-.offer p{font-size:1.1rem;margin-bottom:25px;opacity:0.95}
-.btn{background:#fff;color:var(--primary);padding:15px 40px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;transition:all 0.3s;box-shadow:0 5px 20px rgba(0,0,0,0.2)}
-.btn:hover{transform:scale(1.05);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
-.btn-buy{background:#ffd700;color:#1b4332}
-.stats{display:flex;justify-content:space-around;margin:40px 0;flex-wrap:wrap}
-.stat-item{text-align:center;padding:20px}
-.stat-number{font-size:2.5rem;font-weight:700;color:var(--primary)}
-.stat-label{color:var(--text);opacity:0.8}
-.about{background:#fff;padding:60px 20px;border-radius:30px;margin:40px 0;box-shadow:0 5px 20px rgba(0,0,0,0.1)}
-.about h2{color:var(--primary);margin-bottom:20px;font-size:2rem}
-.telegram{background:var(--text);color:#fff;padding:30px;border-radius:20px;margin:40px 0}
-.telegram a{color:var(--accent);text-decoration:none;font-weight:700}
-footer{text-align:center;padding:30px;color:var(--text);opacity:0.7}
-@media(max-width:600px){h1{font-size:2rem}.features{grid-template-columns:1fr}.stats{flex-direction:column}}
+
+h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--accent),var(--sakura));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;text-shadow:0 0 30px rgba(255,215,0,0.3)}
+.chinese-char{font-size:2rem;color:var(--accent);opacity:0.8;margin-bottom:20px;letter-spacing:10px}
+.subtitle{font-size:1.3rem;color:var(--sakura);margin-bottom:30px}
+.tagline{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:20px 40px;border-radius:50px;display:inline-block;margin-bottom:30px;font-size:1.2rem;box-shadow:0 10px 30px rgba(139,0,0,0.4);border:2px solid var(--accent)}
+/* Chinese Metaphors Section */
+.metaphors{display:flex;justify-content:center;gap:30px;margin:40px 0;flex-wrap:wrap}
+.metaphor-item{text-align:center}
+.metaphor-symbol{font-size:3rem;margin-bottom:10px;display:block}
+.metaphor-text{font-size:0.9rem;color:var(--sakura);font-style:italic}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin:50px 0}
+.feature{background:linear-gradient(135deg,rgba(139,0,0,0.3),rgba(22,33,62,0.5));padding:35px 25px;border-radius:20px;border:2px solid rgba(255,215,0,0.3);transition:all 0.3s;position:relative;overflow:hidden}
+.feature::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,transparent,rgba(255,215,0,0.1));opacity:0;transition:opacity 0.3s}
+.feature:hover{transform:translateY(-10px);border-color:var(--accent);box-shadow:0 15px 40px rgba(255,215,0,0.3)}
+.feature:hover::before{opacity:1}
+.feature-icon{font-size:3.5rem;margin-bottom:15px;display:block;position:relative;z-index:1}
+.feature h3{color:var(--accent);margin-bottom:10px;font-size:1.3rem;position:relative;z-index:1}
+.feature p{position:relative;z-index:1;opacity:0.9}
+
+/* About Section */
+.about-section{background:linear-gradient(135deg,rgba(139,0,0,0.2),rgba(22,33,62,0.6));padding:50px 30px;border-radius:30px;margin:50px 0;border:2px solid rgba(255,215,0,0.2);text-align:left}
+.about-section h2{color:var(--accent);font-size:2.2rem;margin-bottom:30px;text-align:center;text-transform:uppercase;letter-spacing:3px}
+.about-block{margin-bottom:35px}
+.about-block h3{color:var(--sakura);font-size:1.4rem;margin-bottom:15px;display:flex;align-items:center;gap:10px}
+.about-block h3::before{content:'🏮';font-size:1.5rem}
+.about-block p{line-height:1.8;opacity:0.9;margin-bottom:10px}
+.about-block ul{list-style:none;padding-left:0}
+.about-block ul li{padding:8px 0;padding-left:25px;position:relative;opacity:0.9}
+.about-block ul li::before{content:'▸';color:var(--accent);position:absolute;left:0;font-weight:bold}
+.philosophy-quote{background:rgba(255,215,0,0.1);border-left:4px solid var(--accent);padding:20px 30px;border-radius:10px;margin:30px 0;font-style:italic;font-size:1.2rem;color:var(--accent);text-align:center}
+
+.offer{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:50px 30px;border-radius:30px;margin:50px 0;box-shadow:0 15px 50px rgba(139,0,0,0.5);border:3px solid var(--accent);position:relative;overflow:hidden}
+.offer::before{content:'📚';position:absolute;top:20px;right:20px;font-size:4rem;opacity:0.2}
+.offer h2{font-size:2.5rem;margin-bottom:20px}
+.offer p{font-size:1.2rem;margin-bottom:30px;opacity:0.95}
+.btn{background:var(--accent);color:var(--primary);padding:18px 50px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.3);font-size:1.1rem;border:2px solid transparent}
+.btn:hover{transform:scale(1.05);box-shadow:0 12px 35px rgba(0,0,0,0.4);background:#fff}
+
+.stats{display:flex;justify-content:space-around;margin:50px 0;flex-wrap:wrap;gap:20px}
+.stat-item{text-align:center;padding:25px;background:rgba(255,215,0,0.1);border-radius:20px;border:2px solid rgba(255,215,0,0.3);flex:1;min-width:150px;transition:all 0.3s}
+.stat-item:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 10px 30px rgba(255,215,0,0.2)}
+.stat-number{font-size:3rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--sakura));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{color:var(--sakura);opacity:0.9;margin-top:5px}
+
+.telegram{background:linear-gradient(135deg,#0088cc,#005580);color:#fff;padding:40px 30px;border-radius:20px;margin:50px 0;box-shadow:0 10px 30px rgba(0,136,204,0.3)}
+.telegram a{color:var(--accent);text-decoration:none;font-weight:700;border-bottom:2px solid var(--accent);transition:all 0.3s}
+.telegram a:hover{color:#fff;border-color:#fff}
+
+footer{text-align:center;padding:40px;color:var(--sakura);opacity:0.7;border-top:2px solid rgba(255,215,0,0.2);margin-top:50px}
+.chinese-footer{font-size:2rem;margin-bottom:10px;opacity:0.5}
+
+@media(max-width:768px){
+h1{font-size:2rem}.chinese-char{font-size:1.5rem;letter-spacing:5px}
+.features{grid-template-columns:1fr}
+.stats{flex-direction:column}
+.container{padding:30px 15px}
+.about-section{padding:30px 20px}
+}
 </style>
 </head>
 <body>
+<!-- Sakura Petals -->
+<div class="sakura-container">
+<div class="petal"></div><div class="petal"></div><div class="petal"></div>
+<div class="petal"></div><div class="petal"></div><div class="petal"></div>
+<div class="petal"></div>
+</div>
+
+<!-- Temple Background SVG -->
+<svg class="temple-bg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M200 50 L250 100 L230 100 L230 150 L260 150 L260 200 L140 200 L140 150 L170 150 L170 100 L150 100 Z" fill="currentColor" opacity="0.3"/>
+<path d="M100 200 L300 200 L280 350 L120 350 Z" fill="currentColor" opacity="0.2"/>
+</svg>
+
 <section class="hero">
 <div class="container">
-<img src="https://drive.google.com/uc?export=view&id=10SgTwr15rRMr9KNND9Y5RrtfZMzjSxhk" alt="Li Wei" class="avatar" onerror="this.src='https://via.placeholder.com/150/2d6a4f/ffffff?text=Li+Wei'">
+<div class="avatar-frame">
+<img src="https://i.postimg.cc/T3g887XS/Li-Wei-Master-Sujok-Reference-jpg.png" alt="Li Wei" class="avatar" onerror="this.src='https://via.placeholder.com/180/8b0000/ffd700?text=Li+Wei'">
+</div>
+
 <h1>Li Wei</h1>
+<div class="chinese-char">李伟</div>
 <p class="subtitle">Цигун + Кум Нье</p>
-<div class="tagline">🍃 Мягко. Безопасно. Без таблеток.</div>
-<div class="features">
-<div class="feature">
-<div class="feature-icon">🧘</div>
-<h3>Цигун</h3>
-<p>Древняя практика для гармонии тела и духа</p>
+<div class="tagline">🍃 Хорошо находиться в движении. Это. Безопасно. Без таблеток.</div>
+
+<!-- Chinese Metaphors -->
+<div class="metaphors">
+<div class="metaphor-item">
+<span class="metaphor-symbol">☯</span>
+<span class="metaphor-text">Инь и Ян<br>Гармония противоположностей</span>
 </div>
-<div class="feature">
-<div class="feature-icon">🌿</div>
-<h3>Кум Нье</h3>
-<p>Тибетский массаж для снятия напряжения</p>
+<div class="metaphor-item">
+<span class="metaphor-symbol">🎋</span>
+<span class="metaphor-text">Бамбук<br>Гибкость и сила</span>
 </div>
-<div class="feature">
-<div class="feature-icon">💚</div>
-<h3>Здоровье</h3>
-<p>Естественный путь без лекарств</p>
+<div class="metaphor-item">
+<span class="metaphor-symbol">🌸</span>
+<span class="metaphor-text">Сакура<br>Мимолётность момента</span>
 </div>
 </div>
 
+<div class="features"><div class="feature">
+<span class="feature-icon">🧘</span>
+<h3>Цигун</h3>
+<p>Древняя практика для гармонии тела и духа. Движение, дыхание, внимание.</p>
+</div>
+<div class="feature">
+<span class="feature-icon">🌿</span>
+<h3>Кум Нье</h3>
+<p>Тибетский массаж для снятия напряжения. Точечная работа с телом.</p>
+</div>
+<div class="feature">
+<span class="feature-icon">💚</span>
+<h3>Здоровье</h3>
+<p>Естественный путь без лекарств. Тело знает как исцеляться.</p>
+</div>
+</div>
+
+<!-- About Section -->
+<div class="about-section">
+<h2>⚜ Обо Мне</h2>
+
+<div class="about-block">
+<h3>Меня зовут Ли Вэй</h3>
+<p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
+</div>
+
+<div class="about-block">
+<h3>Как я пришёл к практикам</h3>
+<p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
+</div>
+
+<div class="about-block">
+<h3>Почему я веду блог</h3>
+<p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
+<p><strong>Я создаю контент для тех, кто:</strong></p>
+<ul>
+<li>Устал от «волшебных таблеток» и сложных курсов</li>
+<li>Хочет помогать себе сам — мягко, без насилия над собой</li>
+<li>Ценит научный подход, но не теряет связь с телом</li>
+</ul>
+</div>
+
+<div class="about-block">
+<h3>Моя философия</h3>
+<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div>
+<p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
+<p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
+<p style="text-align:right;margin-top:20px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
+</div>
+</div>
 <div class="offer">
-<h2>📚 Мини-книга</h2>
-<p>«Аптечка от тревоги»<br>Мини-книга о том, как справиться с тревогой естественно</p>
-<a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn btn-buy" target="_blank">Купить книгу →</a>
+<h2>📚 Мини-книга «Аптечка от тревоги»</h2>
+<p>Практическое руководство о том, как справиться с тревогой естественно<br>Без таблеток. Без сложных теорий. Только работающие техники.</p>
+<a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
 </div>
 
 <div class="stats">
@@ -86,18 +216,17 @@ footer{text-align:center;padding:30px;color:var(--text);opacity:0.7}
 </div>
 </div>
 
-<div class="about">
-<h2>О практике</h2>
-<p>Цигун и Кум Нье — это мягкие, но мощные практики для восстановления энергии, снятия стресса и укрепления здоровья. Без таблеток, без насилия над телом — только естественные методы, проверенные веками.</p>
-</div>
-
 <div class="telegram">
-<p>📩 <strong>Напишите в Direct</strong> для консультаций<br>или <a href="https://t.me/Permyakov_Evgeniy">подпишитесь на Telegram</a></p>
+<p style="font-size:1.2rem;margin-bottom:15px">📩 <strong>Напишите в Direct</strong> для консультаций</p>
+<p>или <a href="https://t.me/Permyakov_Evgeniy" target="_blank">подпишитесь на Telegram</a></p>
 </div>
 
 <footer>
-<p>© 2026 Li Wei | Здоровье естественным путём 🌱</p></footer>
+<div class="chinese-footer">☯  🌸</div>
+<p>© 2026 Li Wei | 李伟 | Здоровье естественным путём</p>
+<p style="margin-top:10px;font-size:0.9rem">气功 + སྐུ་མཉེ</p>
+</footer>
 </div>
 </section>
 </body>
-  </html>
+</html>
