@@ -58,7 +58,16 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .about-block p{font-size:0.95rem;line-height:1.6;opacity:0.9;margin-bottom:10px}
 .about-block ul{list-style:none;padding-left:0}
 .about-block ul li{padding:5px 0 5px 20px;position:relative;font-size:0.95rem;opacity:0.9}
-.about-block ul li::before{content:'✦';color:var(--accent);position:absolute;left:0}
+.about-block ul li::before{content:'';color:var(--accent);position:absolute;left:0}
+.philosophy-quote{
+  background:rgba(139,0,0,0.3);
+  padding:15px;
+  border-radius:10px;
+  border-left:3px solid var(--accent);
+  font-style:italic;
+  margin:15px 0;
+  color:var(--accent)
+}
 
 /* Красный блок с цитатой */
 .tagline{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:18px 25px;border-radius:50px;display:inline-block;margin-bottom:30px;font-size:1.05rem;box-shadow:0 8px 25px rgba(139,0,0,0.5);border:2px solid var(--accent)}
@@ -87,8 +96,7 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 /* Статистика */
 .stats{display:flex;justify-content:space-around;margin:25px 0;gap:10px}
 .stat-item{background:rgba(255,215,0,0.08);padding:15px 10px;border-radius:15px;flex:1}
-.stat-number{font-size:1.6rem;font-weight:700;color:var(--accent)}
-.stat-label{font-size:0.75rem;opacity:0.7;margin-top:3px}
+.stat-number{font-size:1.6rem;font-weight:700;color:var(--accent)}.stat-label{font-size:0.75rem;opacity:0.7;margin-top:3px}
 
 /* Контакты */
 .telegram{background:#0088cc;color:#fff;padding:15px;border-radius:15px;margin:25px 0;font-size:0.95rem}
@@ -96,7 +104,8 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 footer{margin-top:20px;opacity:0.6;font-size:0.8rem}
 
 @media(max-width:768px){
-h1{font-size:2.2rem}.features{grid-template-columns:1fr}
+h1{font-size:2.2rem}
+.features{grid-template-columns:1fr}
 .stats{flex-direction:column}
 .container{padding:30px 15px}
 }
@@ -121,7 +130,7 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 <div class="chinese-char">李伟</div>
 <p class="subtitle">Цигун + Кум Нье</p>
 
-<!-- ✅ БЛОК "ОБО МНЕ" (БЕЗ ЦИТАТЫ ВНУТРИ) -->
+<!-- ✅ БЛОК "ОБО МНЕ" С ЦИТАТОЙ -->
 <div class="about-section">
 <h2>🎋 Обо Мне</h2>
 
@@ -136,8 +145,7 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 </div>
 
 <div class="about-block">
-<h3>Почему я веду блог</h3>
-<p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
+<h3>Почему я веду блог</h3><p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
 <p><strong>Я создаю контент для тех, кто:</strong></p>
 <ul>
 <li>Устал от «волшебных таблеток» и сложных курсов</li>
@@ -145,8 +153,10 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 <li>Ценит научный подход, но не теряет связь с телом</li>
 </ul>
 </div>
+
 <div class="about-block">
 <h3>Моя философия</h3>
+<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div>
 <p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
 <p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
 <p style="text-align:right;margin-top:10px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
@@ -154,11 +164,11 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 </div>
 <!-- КОНЕЦ БЛОКА ОБО МНЕ -->
 
-<!-- ✅ КРАСНЫЙ БЛОК С ЦИТАТОЙ (ОСТАЛСЯ ТОЛЬКО ОДИН) -->
-<div class="tagline">🍃 Хорошо находиться в движении. Это. Безопасно. Без таблеток.</div>
+<!-- ✅ КРАСНЫЙ БЛОК С ДРУГОЙ ЦИТАТОЙ -->
+<div class="tagline">🍃 Тело - как река: когда течёт свободно, оно очищается само.</div>
 
 <div class="metaphors">
-<div class="metaphor-item"><span class="metaphor-symbol">☯</span><span class="metaphor-text">Гармония</span></div>
+<div class="metaphor-item"><span class="metaphor-symbol"></span><span class="metaphor-text">Гармония</span></div>
 <div class="metaphor-item"><span class="metaphor-symbol">🎋</span><span class="metaphor-text">Сила</span></div>
 <div class="metaphor-item"><span class="metaphor-symbol"></span><span class="metaphor-text">Спокойствие</span></div>
 </div>
@@ -170,7 +180,7 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 </div>
 
 <div class="offer">
-<h2>📚 Мини-книга «Аптечка от тревоги»</h2>
+<h2> Мини-книга «Аптечка от тревоги»</h2>
 <p>Практическое руководство как справиться с тревогой естественно.</p>
 <a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
 </div>
@@ -184,8 +194,7 @@ h1{font-size:2.2rem}.features{grid-template-columns:1fr}
 
 <div class="telegram">
 <p>📩 <strong>Напишите в Direct</strong> для консультаций</p>
-<p>или <a href="https://t.me/Permyakov_Evgeniy">Telegram</a></p>
-</div>
+<p>или <a href="https://t.me/Permyakov_Evgeniy">Telegram</a></p></div>
 
 <footer>
 <p>© 2026 Li Wei | 李伟 | Здоровье естественным путём</p>
