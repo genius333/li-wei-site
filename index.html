@@ -93,15 +93,10 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .btn{background:var(--accent);color:var(--primary);padding:14px 40px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;transition:0.3s;font-size:1rem}
 .btn:hover{transform:scale(1.05);background:#fff}
 
-/* Статистика */
-.stats{display:flex;justify-content:space-around;margin:35px 0;gap:15px}
-.stat-item{background:rgba(255,215,0,0.08);padding:18px 12px;border-radius:15px;flex:1}
-.stat-number{font-size:1.6rem;font-weight:700;color:var(--accent)}.stat-label{font-size:0.75rem;opacity:0.7;margin-top:5px}
 /* 💡 ПРЕДУПРЕЖДЕНИЕ ПЕРЕД БАДАМИ */
 .warning-box{
   background:rgba(255,215,0,0.08);
-  border:2px solid rgba(255,215,0,0.3);
-  border-radius:15px;
+  border:2px solid rgba(255,215,0,0.3);  border-radius:15px;
   padding:25px 20px;
   margin:40px 0;
   text-align:left
@@ -145,12 +140,12 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   margin-bottom:25px;
   line-height:1.7;
   opacity:0.9;
-  font-size:0.95rem}
+  font-size:0.95rem
+}
 .siberian-products{
   margin-top:0;
   padding-top:0;
-  border-top:none
-}
+  border-top:none}
 .siberian-products h3{
   color:var(--sakura);
   font-size:1.1rem;
@@ -194,12 +189,12 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 }
 
 /* Жёлтая кнопка внизу блока */
-.siberian-btn-container{  margin-top:30px;
+.siberian-btn-container{
+  margin-top:30px;
   padding-top:25px;
   border-top:1px solid rgba(255,215,0,0.2);
   text-align:center
-}
-.siberian-btn{
+}.siberian-btn{
   display:inline-block;
   padding:16px 35px;
   background:var(--accent);
@@ -233,6 +228,30 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   opacity:0.7
 }
 
+/* Статистика (Обновлённая) */
+.stats{
+  display:flex;
+  justify-content:center; /* Центрируем, так как элементов теперь меньше */
+  margin:40px 0;
+  gap:30px
+}
+.stat-item{
+  background:rgba(255,215,0,0.08);
+  padding:18px 25px;
+  border-radius:15px;
+  text-align:center;
+  min-width:140px
+}
+.stat-number{
+  font-size:1.8rem;  font-weight:700;
+  color:var(--accent)
+}
+.stat-label{
+  font-size:0.85rem;
+  opacity:0.8;
+  margin-top:5px
+}
+
 /* Контакты - внизу */
 .telegram{
   background:#0088cc;
@@ -243,7 +262,8 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   font-size:1rem;
   border:2px solid rgba(255,255,255,0.2)
 }
-.telegram a{  color:#fff;
+.telegram a{
+  color:#fff;
   font-weight:700;
   text-decoration:underline
 }
@@ -257,7 +277,7 @@ footer{
 @media(max-width:768px){
 h1{font-size:2.2rem}
 .features{grid-template-columns:1fr}
-.stats{flex-direction:column}
+.stats{flex-direction:column; align-items:center}
 .container{padding:40px 20px}
 .about-section{padding:25px 18px}
 .siberian-section{padding:25px 18px}
@@ -272,7 +292,6 @@ h1{font-size:2.2rem}
 <div class="petal"></div><div class="petal"></div><div class="petal"></div>
 <div class="petal"></div>
 </div>
-
 <section class="hero">
 <div class="container">
 <div class="avatar-frame">
@@ -292,7 +311,8 @@ h1{font-size:2.2rem}
 <p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
 </div>
 
-<div class="about-block"><h3>Как я пришёл к практикам</h3>
+<div class="about-block">
+<h3>Как я пришёл к практикам</h3>
 <p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
 </div>
 
@@ -321,15 +341,14 @@ h1{font-size:2.2rem}
 <!-- ✅ ЭМОДЗИ -->
 <div class="metaphors">
 <div class="metaphor-item">
-<span class="metaphor-symbol">🌿</span>
-<span class="metaphor-text">Гармония</span>
+<span class="metaphor-symbol">🌿</span><span class="metaphor-text">Гармония</span>
 </div>
 <div class="metaphor-item">
 <span class="metaphor-symbol"></span>
 <span class="metaphor-text">Сила</span>
 </div>
 <div class="metaphor-item">
-<span class="metaphor-symbol">🌸</span>
+<span class="metaphor-symbol"></span>
 <span class="metaphor-text">Спокойствие</span>
 </div>
 </div>
@@ -341,7 +360,8 @@ h1{font-size:2.2rem}
 <p>Гармония тела и духа</p>
 </div>
 <div class="feature">
-<span class="feature-icon">🌸</span><h3>Кум Нье</h3>
+<span class="feature-icon"></span>
+<h3>Кум Нье</h3>
 <p>Тибетский массаж</p>
 </div>
 <div class="feature"><span class="feature-icon"></span>
@@ -357,13 +377,6 @@ h1{font-size:2.2rem}
 <a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
 </div>
 
-<!-- ✅ СТАТИСТИКА -->
-<div class="stats">
-<div class="stat-item"><div class="stat-number">15</div><div class="stat-label">Постов</div></div>
-<div class="stat-item"><div class="stat-number">215</div><div class="stat-label">Подписчиков</div></div>
-<div class="stat-item"><div class="stat-number">27K</div><div class="stat-label">Просмотров</div></div>
-</div>
-
 <!-- 💡 ПРЕДУПРЕЖДЕНИЕ ПЕРЕД БАДАМИ -->
 <div class="warning-box">
   <div class="icon">💡</div>
@@ -377,8 +390,7 @@ h1{font-size:2.2rem}
 <section class="siberian-section">
   <h2>🌿 Натуральная поддержка из Сибири</h2>
   
-  <p>
-    Продукты, которые я рекомендую для поддержки практики Цигун и Кум Нье. 
+  <p>    Продукты, которые я рекомендую для поддержки практики Цигун и Кум Нье. 
     Натуральные травы + научный подход = помощь телу в работе с энергией.
   </p>
   
@@ -388,9 +400,10 @@ h1{font-size:2.2rem}
     <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501638/?referral=2639048926" 
        class="product-link" target="_blank" rel="nofollow sponsored">
       <div>
-        <strong> Ежовик + Кордицепс</strong>
+        <strong>🍄 Ежовик + Кордицепс</strong>
         <div class="desc">Для энергии и фокуса</div>
-      </div>      <span class="arrow">→</span>
+      </div>
+      <span class="arrow">→</span>
     </a>
     
     <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/400753/?referral=2639048926" 
@@ -426,8 +439,7 @@ h1{font-size:2.2rem}
     <a href="https://ru.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2639048926" 
        class="siberian-btn" target="_blank" rel="nofollow sponsored">
       🌱 Стать<br>Привилегированным клиентом
-    </a>
-    <div class="siberian-subtext">
+    </a>    <div class="siberian-subtext">
       Бесплатно • Кэшбэк 15% • Без обязательств
     </div>
   </div>
@@ -435,14 +447,26 @@ h1{font-size:2.2rem}
   <small class="disclaimer">
     *Я рекомендую эти продукты на основе личного опыта и изучения состава. 
     Ссылки партнёрские — вы платите обычную цену, я получаю кэшбэк 
-    для поддержки развития бесплатных инструментов (АД-калькулятор, гайды).<br><br>
-    Продукты являются БАД, не являются лекарством. Не заменяют консультацию врача. 
-    Перед применением проконсультируйтесь со специалистом.
+    для поддержки развития бесплатных инструментов.<br><br>
+    Продукты являются БАД, не являются лекарством. Не заменяют консультацию врача.
   </small>
 </section>
+
+<!-- ✅ СТАТИСТИКА (ОБНОВЛЁННАЯ) -->
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-number">225</div>
+    <div class="stat-label">Подписчиков</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">31K</div>
+    <div class="stat-label">Просмотров</div>
+  </div>
+</div>
+
 <!-- 📩 КОНТАКТЫ - ВНИЗУ -->
 <div class="telegram">
-  <p style="font-size:1.1rem;margin-bottom:10px"> <strong>Напишите в Direct</strong> для консультаций</p>
+  <p style="font-size:1.1rem;margin-bottom:10px">📩 <strong>Напишите в Direct</strong> для консультаций</p>
   <p>или <a href="https://t.me/Permyakov_Evgeniy">Telegram</a></p>
 </div>
 
