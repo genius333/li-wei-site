@@ -146,26 +146,10 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   line-height:1.7;
   opacity:0.9;
   font-size:0.95rem}
-.siberian-btn{
-  display:inline-block;
-  padding:14px 35px;
-  background:var(--accent);
-  color:var(--primary);
-  text-decoration:none;
-  border-radius:50px;
-  font-weight:700;
-  font-size:1rem;
-  transition:0.3s;
-  box-shadow:0 4px 15px rgba(255,215,0,0.3)
-}
-.siberian-btn:hover{
-  transform:scale(1.05);
-  background:#fff
-}
 .siberian-products{
-  margin-top:30px;
-  padding-top:25px;
-  border-top:1px solid rgba(255,215,0,0.2)
+  margin-top:0;
+  padding-top:0;
+  border-top:none
 }
 .siberian-products h3{
   color:var(--sakura);
@@ -194,7 +178,8 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
 .product-link:hover{
   background:rgba(139,0,0,0.3);
   border-color:var(--accent)
-}.product-link strong{
+}
+.product-link strong{
   font-size:0.95rem
 }
 .product-link .desc{
@@ -207,6 +192,38 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   font-size:0.9rem;
   font-weight:600
 }
+
+/* Жёлтая кнопка внизу блока */
+.siberian-btn-container{  margin-top:30px;
+  padding-top:25px;
+  border-top:1px solid rgba(255,215,0,0.2);
+  text-align:center
+}
+.siberian-btn{
+  display:inline-block;
+  padding:16px 35px;
+  background:var(--accent);
+  color:#8b0000;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:800;
+  font-size:1.05rem;
+  transition:0.3s;
+  box-shadow:0 6px 20px rgba(255,215,0,0.4);
+  line-height:1.4
+}
+.siberian-btn:hover{
+  transform:scale(1.05);
+  background:#fff;
+  color:#8b0000
+}
+.siberian-subtext{
+  font-size:0.85rem;
+  color:var(--sakura);
+  margin-top:12px;
+  opacity:0.9
+}
+
 .disclaimer{
   color:#aaa;
   display:block;
@@ -226,8 +243,7 @@ h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--acc
   font-size:1rem;
   border:2px solid rgba(255,255,255,0.2)
 }
-.telegram a{
-  color:#fff;
+.telegram a{  color:#fff;
   font-weight:700;
   text-decoration:underline
 }
@@ -243,7 +259,8 @@ h1{font-size:2.2rem}
 .features{grid-template-columns:1fr}
 .stats{flex-direction:column}
 .container{padding:40px 20px}
-.about-section{padding:25px 18px}.siberian-section{padding:25px 18px}
+.about-section{padding:25px 18px}
+.siberian-section{padding:25px 18px}
 }
 </style>
 </head>
@@ -275,8 +292,7 @@ h1{font-size:2.2rem}
 <p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
 </div>
 
-<div class="about-block">
-<h3>Как я пришёл к практикам</h3>
+<div class="about-block"><h3>Как я пришёл к практикам</h3>
 <p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
 </div>
 
@@ -292,7 +308,8 @@ h1{font-size:2.2rem}
 
 <div class="about-block">
 <h3>Моя философия</h3>
-<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div><p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
+<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div>
+<p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
 <p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
 <p style="text-align:right;margin-top:15px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
 </div>
@@ -324,11 +341,10 @@ h1{font-size:2.2rem}
 <p>Гармония тела и духа</p>
 </div>
 <div class="feature">
-<span class="feature-icon">🌸</span>
-<h3>Кум Нье</h3>
+<span class="feature-icon">🌸</span><h3>Кум Нье</h3>
 <p>Тибетский массаж</p>
 </div>
-<div class="feature"><span class="feature-icon">💪</span>
+<div class="feature"><span class="feature-icon"></span>
 <h3>Здоровье</h3>
 <p>Естественный путь</p>
 </div>
@@ -341,7 +357,8 @@ h1{font-size:2.2rem}
 <a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
 </div>
 
-<!-- ✅ СТАТИСТИКА --><div class="stats">
+<!-- ✅ СТАТИСТИКА -->
+<div class="stats">
 <div class="stat-item"><div class="stat-number">15</div><div class="stat-label">Постов</div></div>
 <div class="stat-item"><div class="stat-number">215</div><div class="stat-label">Подписчиков</div></div>
 <div class="stat-item"><div class="stat-number">27K</div><div class="stat-label">Просмотров</div></div>
@@ -365,32 +382,22 @@ h1{font-size:2.2rem}
     Натуральные травы + научный подход = помощь телу в работе с энергией.
   </p>
   
-  <div style="text-align:center;margin:30px 0">
-    <a href="https://ru.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2639048926" 
-       class="siberian-btn" target="_blank" rel="nofollow sponsored">
-      🌱 Стать Привилегированным клиентом
-    </a>
-    <div style="font-size:0.85rem;color:var(--sakura);margin-top:12px;opacity:0.9">
-      Бесплатно • Кэшбэк 15% • Без обязательств
-    </div>
-  </div>
-  
   <div class="siberian-products">
     <h3><span>✦</span> Рекомендуемые продукты</h3>
     
     <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501638/?referral=2639048926" 
        class="product-link" target="_blank" rel="nofollow sponsored">
       <div>
-        <strong>🍄 Ежовик + Кордицепс</strong>
+        <strong> Ежовик + Кордицепс</strong>
         <div class="desc">Для энергии и фокуса</div>
-      </div>
-      <span class="arrow">→</span>
+      </div>      <span class="arrow">→</span>
     </a>
     
     <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/400753/?referral=2639048926" 
        class="product-link" target="_blank" rel="nofollow sponsored">
       <div>
-        <strong>🧹 Набор для очищения</strong>        <div class="desc">Для лёгкости в теле</div>
+        <strong>🧹 Набор для очищения</strong>
+        <div class="desc">Для лёгкости в теле</div>
       </div>
       <span class="arrow">→</span>
     </a>
@@ -414,6 +421,17 @@ h1{font-size:2.2rem}
     </a>
   </div>
   
+  <!-- ЖЁЛТАЯ КНОПКА ВНИЗУ -->
+  <div class="siberian-btn-container">
+    <a href="https://ru.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2639048926" 
+       class="siberian-btn" target="_blank" rel="nofollow sponsored">
+      🌱 Стать<br>Привилегированным клиентом
+    </a>
+    <div class="siberian-subtext">
+      Бесплатно • Кэшбэк 15% • Без обязательств
+    </div>
+  </div>
+  
   <small class="disclaimer">
     *Я рекомендую эти продукты на основе личного опыта и изучения состава. 
     Ссылки партнёрские — вы платите обычную цену, я получаю кэшбэк 
@@ -422,10 +440,9 @@ h1{font-size:2.2rem}
     Перед применением проконсультируйтесь со специалистом.
   </small>
 </section>
-
 <!-- 📩 КОНТАКТЫ - ВНИЗУ -->
 <div class="telegram">
-  <p style="font-size:1.1rem;margin-bottom:10px">📩 <strong>Напишите в Direct</strong> для консультаций</p>
+  <p style="font-size:1.1rem;margin-bottom:10px"> <strong>Напишите в Direct</strong> для консультаций</p>
   <p>или <a href="https://t.me/Permyakov_Evgeniy">Telegram</a></p>
 </div>
 
