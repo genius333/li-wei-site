@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наши продукты | Li Wei</title>
+<style>
+/* === ОБЩИЕ СТИЛИ === */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#8b0000;--secondary:#c41e3a;--accent:#ffd700;--bg:#1a1a2e;--text:#f5f5f5;--sakura:#ffb7c5}
+body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh}
+.sakura-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1;overflow:hidden}
+.petal{position:absolute;top:-10%;width:15px;height:15px;background:linear-gradient(135deg,var(--sakura),#ffc0cb);border-radius:50% 0 50% 50%;transform:rotate(45deg);animation:fall linear infinite;opacity:0.6}
+.petal:nth-child(1){left:10%;animation-duration:15s;animation-delay:0s}
+.petal:nth-child(2){left:20%;animation-duration:18s;animation-delay:2s}
+.petal:nth-child(3){left:35%;animation-duration:16s;animation-delay:4s}
+.petal:nth-child(4){left:50%;animation-duration:20s;animation-delay:1s}
+.petal:nth-child(5){left:65%;animation-duration:17s;animation-delay:3s}
+.petal:nth-child(6){left:80%;animation-duration:19s;animation-delay:5s}
+.petal:nth-child(7){left:90%;animation-duration:14s;animation-delay:2s}
+@keyframes fall{0%{transform:translateY(-100px) rotate(45deg) translateX(0)}50%{transform:translateY(50vh) rotate(225deg) translateX(100px)}100%{transform:translateY(calc(100vh + 100px)) rotate(405deg) translateX(0)}}
+
+/* === СТРУКТУРА === */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{max-width:900px;width:100%;text-align:center;z-index:1;background:rgba(22,33,62,0.92);backdrop-filter:blur(12px);border-radius:30px;padding:50px 25px;border:2px solid rgba(255,215,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+h1{font-size:2.2rem;margin-bottom:10px;color:var(--accent)}
+.subtitle{color:var(--sakura);margin-bottom:30px;font-size:1.1rem;opacity:0.9}
+
+/* === КНОПКА НАЗАД === */
+.btn-back{display:inline-block;padding:10px 25px;background:rgba(255,255,255,0.1);color:var(--text);text-decoration:none;border-radius:50px;margin-bottom:30px;font-size:0.95rem;border:1px solid rgba(255,215,0,0.3);transition:0.3s}
+.btn-back:hover{background:var(--accent);color:var(--primary);border-color:var(--accent)}
+
+/* === СЕТКА ТОВАРОВ === */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-top:20px}
+.product-card{background:rgba(255,255,255,0.05);padding:25px 20px;border-radius:20px;border:1px solid rgba(255,215,0,0.15);transition:0.3s;text-align:left}
+.product-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+.product-icon{font-size:2.5rem;margin-bottom:15px;display:block}
+.product-title{font-size:1.3rem;color:var(--accent);margin-bottom:10px;font-weight:700}
+.product-desc{font-size:0.95rem;color:var(--text);opacity:0.9;margin-bottom:20px;line-height:1.5}
+.product-btn{display:block;width:100%;padding:12px;background:var(--accent);color:var(--primary);text-align:center;text-decoration:none;border-radius:12px;font-weight:700;transition:0.3s}
+.product-btn:hover{background:#fff;transform:scale(1.02)}
+
+/* === РАЗДЕЛИТЕЛЬ КАТЕГОРИЙ === */
+.category-title{
+  grid-column:1/-1;
+  text-align:left;
+  color:var(--sakura);
+  font-size:1.1rem;
+  margin:30px 0 10px;
+  padding-left:10px;  border-left:3px solid var(--accent)
+}
+
+/* === БЛОК SIBERIAN WELLNESS === */
+.siberian-block{
+  grid-column:1/-1;
+  background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(139,0,0,0.2));
+  padding:30px 25px;
+  border-radius:20px;
+  border:2px solid var(--accent);
+  margin-top:30px
+}
+.siberian-block h3{
+  color:var(--accent);
+  font-size:1.4rem;
+  margin-bottom:15px
+}
+.siberian-block p{
+  font-size:0.95rem;
+  opacity:0.9;
+  margin-bottom:20px;
+  line-height:1.6
+}
+.siberian-btn{
+  display:inline-block;
+  padding:14px 35px;
+  background:var(--accent);
+  color:#8b0000;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:800;
+  font-size:1.05rem;
+  transition:0.3s;
+  box-shadow:0 6px 20px rgba(255,215,0,0.4)
+}
+.siberian-btn:hover{
+  transform:scale(1.05);
+  background:#fff
+}
+.siberian-subtext{
+  display:block;
+  margin-top:12px;
+  font-size:0.85rem;
+  color:var(--sakura);
+  opacity:0.9
+}
+
+/* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
+@media(max-width:600px){
+.container{padding:35px 15px}h1{font-size:1.8rem}
+.products-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Сакура -->
+<div class="sakura-container">
+<div class="petal"></div><div class="petal"></div><div class="petal"></div>
+<div class="petal"></div><div class="petal"></div><div class="petal"></div>
+<div class="petal"></div>
+</div>
+
+<section class="hero">
+<div class="container">
+  <h1>🛍️ Наши продукты</h1>
+  <p class="subtitle">Инструменты для практики, здоровья и гармонии</p>
+  
+  <a href="index.html" class="btn-back">← Вернуться на главную</a>
+
+  <div class="products-grid">
+    
+    <!-- 📚 КАТЕГОРИЯ: Мини-книги -->
+    <div class="category-title">📚 Мини-книги</div>
+    
+    <!-- Книга 1: Аптечка от тревоги -->
+    <div class="product-card">
+      <span class="product-icon">📚</span>
+      <h3 class="product-title">«Аптечка от тревоги»</h3>
+      <p class="product-desc">Практическое руководство: как справиться с тревогой естественно, без таблеток и сложных теорий.</p>
+      <a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- Книга 2: 5 техник для плоского живота -->
+    <div class="product-card">
+      <span class="product-icon">📘</span>
+      <h3 class="product-title">«5 техник для плоского живота»</h3>
+      <p class="product-desc">Естественный тонус через дыхание, осанку и расслабление. 5 минут в день — без диет и изнурительных тренировок.</p>
+      <a href="https://app.lava.top/products/1ecc97d0-578e-49c2-ac39-4ef1e750bd90" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- 🌿 КАТЕГОРИЯ: Поддержка практики -->
+    <div class="category-title">🌿 Поддержка практики</div>
+    
+    <!-- БАД 1: Ежовик + Кордицепс -->
+    <div class="product-card">
+      <span class="product-icon">🍄</span>
+      <h3 class="product-title">Ежовик + Кордицепс</h3>
+      <p class="product-desc">Для энергии и фокуса. Поддержка дыхания и когнитивных функций.</p>      <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501638/?referral=2639048926" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- БАД 2: Набор для очищения -->
+    <div class="product-card">
+      <span class="product-icon">🧹</span>
+      <h3 class="product-title">Набор для очищения</h3>
+      <p class="product-desc">Для лёгкости в теле. Комплексное очищение на уровне ЖКТ и лимфы.</p>
+      <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/400753/?referral=2639048926" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- БАД 3: Коэнзим Q10 -->
+    <div class="product-card">
+      <span class="product-icon">❤️</span>
+      <h3 class="product-title">Коэнзим Q10</h3>
+      <p class="product-desc">Для сердца и энергии. Поддержка митохондрий и клеточного дыхания.</p>
+      <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501419/?referral=2639048926" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- БАД 4: Органический кальций -->
+    <div class="product-card">
+      <span class="product-icon">🦴</span>
+      <h3 class="product-title">Органический кальций</h3>
+      <p class="product-desc">Для суставов и костей. Поддержка опорно-двигательного аппарата и нервной системы.</p>
+      <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/500628/?referral=2639048926" class="product-btn" target="_blank" rel="nofollow sponsored">Подробнее →</a>
+    </div>
+
+    <!-- 🌱 БЛОК SIBERIAN WELLNESS -->
+    <div class="siberian-block">
+      <h3>🌱 Стать привилегированным участником Siberian Wellness</h3>
+      <p>
+        Получите скидку 15% на все продукты + кэшбэк с каждой покупки. 
+        Регистрация бесплатная и ни к чему не обязывает.
+      </p>
+      <a href="https://ru.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2639048926" 
+         class="siberian-btn" target="_blank" rel="nofollow sponsored">
+        Стать привилегированным участником
+      </a>
+      <span class="siberian-subtext">Бесплатно • Скидка 15% • Кэшбэк • Без обязательств</span>
+    </div>
+
+  </div>
+</div>
+</section>
+
+</body>
+  </html>
