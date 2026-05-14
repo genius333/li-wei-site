@@ -6,7 +6,7 @@
 
 <!-- ✅ МЕТА-ТЕГИ -->
 <meta property="og:title" content="Li Wei | Цигун + Кум Нье">
-<meta property="og:description" content="30 лет практики. Мягко. Безопасно. Без таблеток. Практическое руководство «Аптечка от тревоги».">
+<meta property="og:description" content="30 лет практики. Мягко. Естественно. В гармонии с телом. Практическое руководство «Аптечка от тревоги».">
 <meta property="og:image" content="https://genius333.github.io/li-wei-site/li-wei.png">
 <meta property="og:url" content="https://genius333.github.io/li-wei-site/">
 <meta property="og:type" content="website">
@@ -32,255 +32,205 @@ body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);li
 
 /* Основная структура */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
-.container{max-width:900px;text-align:center;z-index:1;background:rgba(22,33,62,0.92);backdrop-filter:blur(12px);border-radius:30px;padding:60px 30px;border:2px solid rgba(255,215,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.container{max-width:900px;text-align:center;z-index:1;background:rgba(22,33,62,0.92);backdrop-filter:blur(12px);border-radius:30px;padding:50px 25px;border:2px solid rgba(255,215,0,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
 
 /* Фото */
-.avatar-frame{position:relative;display:inline-block;margin-bottom:30px;padding-top:30px}
-.avatar{width:180px;height:240px;border-radius:50%;object-fit:cover;object-position:center 15%;border:5px solid var(--accent);box-shadow:0 10px 40px rgba(255,215,0,0.4);animation:pulse 3s ease-in-out infinite;position:relative;z-index:1}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.avatar-frame{position:relative;display:inline-block;margin-bottom:25px;padding-top:20px}
+.avatar{width:160px;height:220px;border-radius:50%;object-fit:cover;object-position:center 15%;border:4px solid var(--accent);box-shadow:0 8px 30px rgba(255,215,0,0.3);animation:pulse 3s ease-in-out infinite;position:relative;z-index:1}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
 
-h1{font-size:3rem;margin-bottom:10px;background:linear-gradient(135deg,var(--accent),var(--sakura));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
-.chinese-char{font-size:2rem;color:var(--accent);opacity:0.8;margin-bottom:15px;letter-spacing:8px}
-.subtitle{font-size:1.3rem;color:var(--sakura);margin-bottom:25px}
+h1{font-size:2.8rem;margin-bottom:8px;background:linear-gradient(135deg,var(--accent),var(--sakura));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+.chinese-char{font-size:1.8rem;color:var(--accent);opacity:0.8;margin-bottom:12px;letter-spacing:6px}
+.subtitle{font-size:1.2rem;color:var(--sakura);margin-bottom:25px}
 
-/* Блок Обо Мне */
+/* Сворачиваемый блок "Обо мне" */
 .about-section{
   background:rgba(255,255,255,0.06); 
-  padding:35px 25px; 
-  border-radius:20px;  margin-bottom:35px; 
+  padding:25px 20px; 
+  border-radius:20px;  margin-bottom:30px; 
   border:1px solid rgba(255,215,0,0.2); 
   text-align:left
 }
-.about-section h2{color:var(--accent);font-size:1.6rem;margin-bottom:25px;text-align:center;letter-spacing:1px}
-.about-block{margin-bottom:25px}
-.about-block h3{color:var(--sakura);font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.about-block h3::before{content:'✦';font-size:1rem;color:var(--accent)}
-.about-block p{font-size:0.95rem;line-height:1.7;opacity:0.9;margin-bottom:12px}
-.about-block ul{list-style:none;padding-left:0}
-.about-block ul li{padding:6px 0 6px 20px;position:relative;font-size:0.95rem;opacity:0.9}
-.about-block ul li::before{content:'▸';color:var(--accent);position:absolute;left:0}
-.philosophy-quote{
-  background:rgba(139,0,0,0.3);
-  padding:18px;
-  border-radius:10px;
-  border-left:3px solid var(--accent);
-  font-style:italic;
-  margin:20px 0;
-  color:var(--accent)
-}
-
-/* Красный блок с цитатой */
-.tagline{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:20px 30px;border-radius:50px;display:inline-block;margin-bottom:35px;font-size:1.05rem;box-shadow:0 8px 25px rgba(139,0,0,0.5);border:2px solid var(--accent)}
-
-/* Метафоры */
-.metaphors{display:flex;justify-content:center;gap:30px;margin:35px 0;flex-wrap:wrap}
-.metaphor-item{text-align:center}
-.metaphor-symbol{font-size:2.2rem;margin-bottom:8px;display:block}
-.metaphor-text{font-size:0.85rem;color:var(--sakura);font-weight:600}
-
-/* Услуги */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;margin:35px 0}
-.feature{background:linear-gradient(135deg,rgba(139,0,0,0.3),rgba(22,33,62,0.6));padding:30px 20px;border-radius:15px;border:1px solid rgba(255,215,0,0.2);transition:0.3s}
-.feature:hover{transform:translateY(-5px);border-color:var(--accent)}
-.feature-icon{font-size:2.5rem;margin-bottom:12px;display:block}
-.feature h3{color:var(--accent);margin-bottom:10px;font-size:1.2rem}
-.feature p{font-size:0.9rem;opacity:0.9}
-
-/* Книга */
-.offer{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:30px 25px;border-radius:25px;margin:40px 0;border:2px solid var(--accent)}
-.offer h2{font-size:1.5rem;margin-bottom:12px}
-.offer p{margin-bottom:18px;font-size:0.95rem}
-.btn{background:var(--accent);color:var(--primary);padding:14px 40px;border-radius:50px;text-decoration:none;font-weight:700;display:inline-block;transition:0.3s;font-size:1rem}
-.btn:hover{transform:scale(1.05);background:#fff}
-
-/* 💡 ПРЕДУПРЕЖДЕНИЕ ПЕРЕД БАДАМИ */
-.warning-box{
-  background:rgba(255,215,0,0.08);
-  border:2px solid rgba(255,215,0,0.3);  border-radius:15px;
-  padding:25px 20px;
-  margin:40px 0;
-  text-align:left
-}
-.warning-box .icon{
-  font-size:2rem;
-  margin-bottom:12px
-}
-.warning-box h3{
-  color:var(--accent);
-  font-size:1.2rem;
-  margin-bottom:12px
-}
-.warning-box p{
-  font-size:0.95rem;
-  line-height:1.7;
-  opacity:0.9;
-  margin-bottom:8px
-}
-.warning-box .highlight{
-  color:var(--sakura);
-  font-weight:600
-}
-
-/* 🌿 СИБИРСКОЕ ЗДОРОВЬЕ */
-.siberian-section{
-  background:rgba(255,255,255,0.06);
-  padding:35px 25px;
-  border-radius:20px;
-  margin:40px 0;
-  border:1px solid rgba(255,215,0,0.2);
-  text-align:left
-}
-.siberian-section h2{
-  color:var(--accent);
-  font-size:1.4rem;
-  margin-bottom:18px;
-  text-align:center
-}
-.siberian-section p{
-  margin-bottom:25px;
-  line-height:1.7;
-  opacity:0.9;
-  font-size:0.95rem
-}
-.siberian-products{
-  margin-top:0;
-  padding-top:0;
-  border-top:none}
-.siberian-products h3{
-  color:var(--sakura);
-  font-size:1.1rem;
-  margin-bottom:18px;
-  display:flex;
-  align-items:center;
-  gap:10px
-}
-.siberian-products h3 span{
-  color:var(--accent)
-}
-.product-link{
-  padding:14px 18px;
-  background:rgba(139,0,0,0.2);
-  border-radius:12px;
-  text-decoration:none;
-  color:var(--text);
+.about-toggle{
+  cursor:pointer;
+  list-style:none;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  transition:0.3s;
-  border:1px solid rgba(255,215,0,0.1);
-  margin-bottom:15px
+  margin-bottom:0
 }
-.product-link:hover{
-  background:rgba(139,0,0,0.3);
-  border-color:var(--accent)
+.about-toggle::-webkit-details-marker{display:none}
+.about-toggle h2{
+  color:var(--accent);
+  font-size:1.4rem;
+  margin:0
 }
-.product-link strong{
+.toggle-hint{
+  color:var(--sakura);
+  font-size:0.85rem;
+  opacity:0.7;
+  margin-top:5px
+}
+.arrow{
+  display:inline-block;
+  transition:transform 0.3s ease;
+  color:var(--accent);
+  font-size:1.2rem
+}
+details[open] .arrow{transform:rotate(180deg)}
+/* Пульсация стрелки, когда блок свёрнут */
+.about-section:not([open]) .arrow{
+  animation:arrowPulse 1.5s ease-in-out infinite
+}
+@keyframes arrowPulse{
+  0%,100%{opacity:0.6;transform:translateY(0)}
+  50%{opacity:1;transform:translateY(3px)}
+}
+
+.about-content{
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,215,0,0.2)
+}
+.about-block{margin-bottom:20px}
+.about-block h3{color:var(--sakura);font-size:1.05rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.about-block h3::before{content:'';font-size:0.9rem;color:var(--accent)}
+.about-block p{font-size:0.92rem;line-height:1.65;opacity:0.9;margin-bottom:10px}
+.about-block ul{list-style:none;padding-left:0}.about-block ul li{padding:5px 0 5px 18px;position:relative;font-size:0.92rem;opacity:0.9}
+.about-block ul li::before{content:'▸';color:var(--accent);position:absolute;left:0}
+.philosophy-quote{
+  background:rgba(139,0,0,0.25);
+  padding:15px;
+  border-radius:10px;
+  border-left:3px solid var(--accent);
+  font-style:italic;
+  margin:15px 0;
+  color:var(--accent);
   font-size:0.95rem
 }
-.product-link .desc{
-  font-size:0.85rem;
-  color:var(--sakura);
-  margin-top:5px
-}
-.product-link .arrow{
-  color:var(--accent);
-  font-size:0.9rem;
-  font-weight:600
-}
 
-/* Жёлтая кнопка внизу блока */
-.siberian-btn-container{
-  margin-top:30px;
-  padding-top:25px;
-  border-top:1px solid rgba(255,215,0,0.2);
+/* ✅ БЛОК: 3 ПРАКТИКИ «ЗДЕСЬ И СЕЙЧАС» */
+.practices-section{
+  background:rgba(255,255,255,0.04);
+  padding:30px 20px;
+  border-radius:20px;
+  margin:30px 0;
+  border:1px solid rgba(255,215,0,0.15);
+  text-align:left
+}
+.practices-section h2{
+  color:var(--accent);
+  font-size:1.4rem;
+  margin-bottom:8px;
   text-align:center
-}.siberian-btn{
-  display:inline-block;
-  padding:16px 35px;
-  background:var(--accent);
-  color:#8b0000;
-  text-decoration:none;
-  border-radius:50px;
-  font-weight:800;
-  font-size:1.05rem;
-  transition:0.3s;
-  box-shadow:0 6px 20px rgba(255,215,0,0.4);
-  line-height:1.4
 }
-.siberian-btn:hover{
-  transform:scale(1.05);
-  background:#fff;
-  color:#8b0000
-}
-.siberian-subtext{
-  font-size:0.85rem;
+.section-subtitle{
+  text-align:center;
   color:var(--sakura);
-  margin-top:12px;
+  margin-bottom:25px;
+  font-size:1rem;
   opacity:0.9
 }
-
-.disclaimer{
-  color:#aaa;
-  display:block;
-  margin-top:25px;
-  line-height:1.6;
-  font-size:0.75rem;
-  opacity:0.7
+.practices-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  margin-bottom:25px
 }
-
-/* Статистика (Обновлённая) */
-.stats{
-  display:flex;
-  justify-content:center; /* Центрируем, так как элементов теперь меньше */
-  margin:40px 0;
-  gap:30px
-}
-.stat-item{
-  background:rgba(255,215,0,0.08);
-  padding:18px 25px;
+.practice-card{
+  background:rgba(22,33,62,0.6);
+  padding:20px;
   border-radius:15px;
-  text-align:center;
-  min-width:140px
+  border:1px solid rgba(255,215,0,0.1);
+  transition:0.3s
 }
-.stat-number{
-  font-size:1.8rem;  font-weight:700;
-  color:var(--accent)
+.practice-card:hover{
+  border-color:var(--accent);  transform:translateY(-3px)
 }
-.stat-label{
+.practice-card h3{
+  color:var(--accent);
+  font-size:1.15rem;
+  margin-bottom:10px
+}
+.practice-meta{
   font-size:0.85rem;
-  opacity:0.8;
-  margin-top:5px
+  color:var(--sakura);
+  margin-bottom:15px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(255,215,0,0.1)
 }
+.practice-content p{
+  font-size:0.92rem;
+  line-height:1.6;
+  opacity:0.9;
+  margin-bottom:10px
+}
+.practice-steps{
+  padding-left:20px;
+  margin:10px 0
+}
+.practice-steps li{
+  margin-bottom:6px;
+  font-size:0.9rem;
+  opacity:0.9
+}
+.practice-result{
+  color:#4caf50;
+  font-size:0.9rem
+}
+.practice-warning{
+  color:#ff9800;
+  font-size:0.85rem;
+  margin-top:8px
+}
+.practices-footer{
+  text-align:center;
+  font-size:0.95rem;
+  opacity:0.9;
+  line-height:1.6
+}
+.practices-footer .signature{
+  margin-top:10px;
+  color:var(--accent);
+  font-weight:600
+}
+/* Главная кнопка */
+.cta-container{text-align:center;margin:30px 0}
+.btn-main{
+  display:inline-block;
+  padding:16px 35px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  border:2px solid var(--accent);
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.05rem;
+  transition:0.3s;
+  box-shadow:0 6px 20px rgba(139,0,0,0.4)
+}
+.btn-main:hover{transform:scale(1.04);background:var(--accent);color:var(--primary)}
 
-/* Контакты - внизу */
+/* Контакты */
 .telegram{
   background:#0088cc;
   color:#fff;
-  padding:25px 20px;
-  border-radius:20px;
-  margin:40px 0;
-  font-size:1rem;
-  border:2px solid rgba(255,255,255,0.2)
+  padding:20px;
+  border-radius:18px;
+  margin:30px 0 10px;
+  font-size:0.95rem;
+  border:2px solid rgba(255,255,255,0.15)
 }
-.telegram a{
-  color:#fff;
-  font-weight:700;
-  text-decoration:underline
-}
+.telegram a{color:#fff;font-weight:700;text-decoration:underline}
 
-footer{
-  margin-top:30px;
-  opacity:0.6;
-  font-size:0.8rem
-}
+footer{margin-top:20px;opacity:0.5;font-size:0.75rem}
 
 @media(max-width:768px){
 h1{font-size:2.2rem}
-.features{grid-template-columns:1fr}
-.stats{flex-direction:column; align-items:center}
-.container{padding:40px 20px}
-.about-section{padding:25px 18px}
-.siberian-section{padding:25px 18px}
+.container{padding:35px 15px}
+.about-section{padding:20px 15px}
+.practices-section{padding:25px 15px}
+.practices-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -292,181 +242,132 @@ h1{font-size:2.2rem}
 <div class="petal"></div><div class="petal"></div><div class="petal"></div>
 <div class="petal"></div>
 </div>
-<section class="hero">
-<div class="container">
+
+<section class="hero"><div class="container">
 <div class="avatar-frame">
-<img src="li-wei.png" alt="Li Wei" class="avatar" onerror="this.src='https://via.placeholder.com/180/8b0000/ffd700?text=Li+Wei'">
+<img src="li-wei.png" alt="Li Wei" class="avatar" onerror="this.src='https://via.placeholder.com/160/8b0000/ffd700?text=Li+Wei'">
 </div>
 
 <h1>Li Wei</h1>
 <div class="chinese-char">李伟</div>
 <p class="subtitle">Цигун + Кум Нье</p>
 
-<!-- ✅ БЛОК "ОБО МНЕ" -->
-<div class="about-section">
-<h2>Обо Мне</h2>
-
-<div class="about-block">
-<h3>Меня зовут Ли Вэй</h3>
-<p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
-</div>
-
-<div class="about-block">
-<h3>Как я пришёл к практикам</h3>
-<p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
-</div>
-
-<div class="about-block">
-<h3>Почему я веду блог</h3><p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
-<p><strong>Я создаю контент для тех, кто:</strong></p>
-<ul>
-<li>Устал от «волшебных таблеток» и сложных курсов</li>
-<li>Хочет помогать себе сам — мягко, без насилия над собой</li>
-<li>Ценит научный подход, но не теряет связь с телом</li>
-</ul>
-</div>
-
-<div class="about-block">
-<h3>Моя философия</h3>
-<div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Без таблеток.»</div>
-<p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
-<p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
-<p style="text-align:right;margin-top:15px;font-weight:700;color:var(--accent)">— Ли Вэй</p>
-</div>
-</div>
-
-<!-- ✅ ЦИТАТА -->
-<div class="tagline">Тело - как река: когда течёт свободно, оно очищается само.</div>
-
-<!-- ✅ ЭМОДЗИ -->
-<div class="metaphors">
-<div class="metaphor-item">
-<span class="metaphor-symbol">🌿</span><span class="metaphor-text">Гармония</span>
-</div>
-<div class="metaphor-item">
-<span class="metaphor-symbol">💪</span>
-<span class="metaphor-text">Сила</span>
-</div>
-<div class="metaphor-item">
-<span class="metaphor-symbol">🌸</span>
-<span class="metaphor-text">Спокойствие</span>
-</div>
-</div>
-
-<div class="features">
-<div class="feature">
-<span class="feature-icon">🌿</span>
-<h3>Цигун</h3>
-<p>Гармония тела и духа</p>
-</div>
-<div class="feature">
-<span class="feature-icon">🌸</span>
-<h3>Кум Нье</h3>
-<p>Тибетский массаж</p>
-</div>
-<div class="feature"><span class="feature-icon">💪</span>
-<h3>Здоровье</h3>
-<p>Естественный путь</p>
-</div>
-</div>
-
-<!-- ✅ КНИГА -->
-<div class="offer">
-<h2>📚 Мини-книга «Аптечка от тревоги»</h2>
-<p>Практическое руководство как справиться с тревогой естественно.</p>
-<a href="https://app.lava.top/products/03188abb-cc2c-4031-9b05-15bb404b74a8" class="btn" target="_blank">Купить книгу →</a>
-</div>
-
-<!-- 💡 ПРЕДУПРЕЖДЕНИЕ ПЕРЕД БАДАМИ -->
-<div class="warning-box">
-  <div class="icon">💡</div>
-  <h3>Практика — это база</h3>
-  <p>БАДы не заменяют дыхание и движение.</p>
-  <p>Это лишь опциональная поддержка для тех, кто хочет усилить эффект.</p>
-  <p class="highlight">Принимать или нет — ваш выбор.</p>
-</div>
-
-<!-- 🌿 СИБИРСКОЕ ЗДОРОВЬЕ -->
-<section class="siberian-section">
-  <h2>🌿 Натуральная поддержка из Сибири</h2>
+<!-- ✅ СВОРАЧИВАЕМЫЙ БЛОК "ОБО МНЕ" (ПО УМОЛЧАНИЮ СВЁРНУТ + ПУЛЬСИРУЮЩАЯ СТРЕЛКА) -->
+<details class="about-section">
+  <summary class="about-toggle">
+    <div>
+      <h2>Обо мне</h2>
+      <p class="toggle-hint">Нажми, чтобы развернуть</p>
+    </div>
+    <span class="arrow">▼</span>
+  </summary>
   
-  <p>    Продукты, которые я рекомендую для поддержки практики Цигун и Кум Нье. 
-    Натуральные травы + научный подход = помощь телу в работе с энергией.
-  </p>
-  
-  <div class="siberian-products">
-    <h3><span>✦</span> Рекомендуемые продукты</h3>
-    
-    <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501638/?referral=2639048926" 
-       class="product-link" target="_blank" rel="nofollow sponsored">
-      <div>
-        <strong>🍄 Ежовик + Кордицепс</strong>
-        <div class="desc">Для энергии и фокуса</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/400753/?referral=2639048926" 
-       class="product-link" target="_blank" rel="nofollow sponsored">
-      <div>
-        <strong>🧹 Набор для очищения</strong>
-        <div class="desc">Для лёгкости в теле</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/501419/?referral=2639048926" 
-       class="product-link" target="_blank" rel="nofollow sponsored">
-      <div>
-        <strong>❤️ Коэнзим Q10</strong>
-        <div class="desc">Для сердца и энергии</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    
-    <a href="https://ru.siberianhealth.com/ru/shop/catalog/product/500628/?referral=2639048926" 
-       class="product-link" target="_blank" rel="nofollow sponsored">
-      <div>
-        <strong>🦴 Органический кальций</strong>
-        <div class="desc">Для суставов и костей</div>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-  </div>
-  
-  <!-- ЖЁЛТАЯ КНОПКА ВНИЗУ -->
-  <div class="siberian-btn-container">
-    <a href="https://ru.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2639048926" 
-       class="siberian-btn" target="_blank" rel="nofollow sponsored">
-      🌱 Стать<br>Привилегированным клиентом
-    </a>    <div class="siberian-subtext">
-      Бесплатно • Кэшбэк 15% • Без обязательств
+  <div class="about-content">
+    <div class="about-block">
+      <h3>Меня зовут Ли Вэй</h3>
+      <p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
+    </div>
+
+    <div class="about-block">
+      <h3>Как я пришёл к практикам</h3>
+      <p>В молодости я искал способ справляться со стрессом без таблеток и сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
+    </div>
+
+    <div class="about-block">
+      <h3>Почему я веду блог</h3>
+      <p>Потому что вижу: людям не нужно больше информации. Им нужно простое, безопасное и работающее решение прямо сейчас.</p>
+      <p><strong>Я создаю контент для тех, кто:</strong></p>
+      <ul>
+        <li>Устал от «волшебных таблеток» и сложных курсов</li>
+        <li>Хочет помогать себе сам — мягко, без насилия над собой</li>
+        <li>Ценит научный подход, но не теряет связь с телом</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <h3>Моя философия</h3>
+      <div class="philosophy-quote">«Хорошо находиться в движении. Это. Безопасно. Естественно.»</div>
+      <p>Я не заменяю врачей. Я даю инструменты, которые могут стать опорой — до, во время и после профессиональной помощи.</p>
+      <p>Если то, что я делаю, отзывается — добро пожаловать. Будем дышать, двигаться и возвращать себе спокойствие. Вместе.</p>
+      <p style="text-align:right;margin-top:10px;font-weight:600;color:var(--accent)">— Ли Вэй</p>
     </div>
   </div>
-  
-  <small class="disclaimer">
-    *Я рекомендую эти продукты на основе личного опыта и изучения состава. 
-    Ссылки партнёрские — вы платите обычную цену, я получаю кэшбэк 
-    для поддержки развития бесплатных инструментов.<br><br>
-    Продукты являются БАД, не являются лекарством. Не заменяют консультацию врача.
-  </small>
-</section>
+</details>
+<!-- ✅ БЛОК: 3 ПРАКТИКИ «ЗДЕСЬ И СЕЙЧАС» -->
+<div class="practices-section">
+  <h2>🆓 3 ПРАКТИКИ «ЗДЕСЬ И СЕЙЧАС»</h2>
+  <p class="section-subtitle">Когда нужно помочь себе прямо сейчас</p>
 
-<!-- ✅ СТАТИСТИКА (ОБНОВЛЁННАЯ) -->
-<div class="stats">
-  <div class="stat-item">
-    <div class="stat-number">225</div>
-    <div class="stat-label">Подписчиков</div>
+  <div class="practices-grid">
+    <!-- Практика 1 -->
+    <div class="practice-card">
+      <h3>🔹 3-3-3 Заземление</h3>
+      <div class="practice-meta"> «Меня накрывает, паника» • 30–60 сек • Где угодно</div>
+      <div class="practice-content">
+        <p><strong>🔬 Механизм:</strong> Возвращает внимание в «здесь и сейчас», снижая активность центра страха в мозге.</p>
+        <ol class="practice-steps">
+          <li>Поставьте стопы на пол, почувствуйте опору.</li>
+          <li>👁️ Назовите вслух 3 объекта, которые видите.</li>
+          <li>👂 Услышьте 3 звука вокруг.</li>
+          <li>🦶 Почувствуйте 3 точки контакта тела с поверхностью.</li>
+          <li>Сделайте один глубокий выдох через рот.</li>
+        </ol>
+        <p class="practice-result">✅ Мысли замедляются, дыхание выравнивается, появляется ощущение «я здесь, я в безопасности».</p>
+        <p class="practice-warning">⚠️ Не замена терапии. При хронической тревоге обратитесь к специалисту.</p>
+      </div>
+    </div>
+
+    <!-- Практика 2 -->
+    <div class="practice-card">
+      <h3> Выдох через губы</h3>
+      <div class="practice-meta">🤢 «Живот вздулся, спазм» • 1–2 мин • Сидя/стоя</div>
+      <div class="practice-content">
+        <p><strong>🔬 Механизм:</strong> Удлинённый выдох активирует блуждающий нерв, переключая тело из «стресса» в «восстановление».</p>
+        <ol class="practice-steps">
+          <li>Сядьте удобно, стопы на полу. Ладонь на живот.</li>
+          <li>Спокойный вдох носом (живот расширяется).</li>
+          <li>Сложите губы как для задувания свечи.</li>
+          <li>Медленно выдыхайте 6–8 секунд. Живот мягко подтягивается.</li>
+          <li>Повторите 3–5 циклов.</li>
+        </ol>
+        <p class="practice-result">✅ Уходит «распирание», расслабляются плечи и челюсть, чувство контроля.</p>
+        <p class="practice-warning">⚠️ Не форсируйте выдох. При головокружении вернитесь к обычному дыханию.</p>
+      </div>
+    </div>
+
+    <!-- Практика 3 -->
+    <div class="practice-card">
+      <h3>🔹 Тяжёлое тело</h3>
+      <div class="practice-meta">🌙 «Не могу уснуть, мысли крутятся» • 2–3 мин • В постели</div>
+      <div class="practice-content">
+        <p><strong>🔬 Механизм:</strong> Ощущение веса посылает мозгу сигнал безопасности, активируя парасимпатическую систему для сна.</p>
+        <ol class="practice-steps">          <li>Лягте на спину, руки вдоль тела, ладони вверх.</li>
+          <li>Закройте глаза, 2–3 обычных вдоха-выдоха.</li>
+          <li>Поочерёдно «отпускайте» части тела, представляя тяжесть: стопы → ноги → руки → корпус → лицо.</li>
+          <li>Наблюдайте за дыханием. Не контролируйте.</li>
+          <li>Если мысли вернулись — мягко начните сканирование заново.</li>
+        </ol>
+        <p class="practice-result">✅ Тело расслабляется, сонливость приходит за 5–10 минут, утром больше свежести.</p>
+        <p class="practice-warning">⚠️ Не засыпайте намеренно. При хронической бессоннице обратитесь к специалисту.</p>
+      </div>
+    </div>
   </div>
-  <div class="stat-item">
-    <div class="stat-number">31K</div>
-    <div class="stat-label">Просмотров</div>
+
+  <div class="practices-footer">
+    <p>💡 <strong>Все три практики:</strong> безопасны • работают за 1–3 минуты • не требуют инвентаря • можно делать где угодно</p>
+    <p>Начните с одной. Той, что нужна прямо сейчас. Тело помнит, как восстанавливаться.</p>
+    <p class="signature">— Ли Вэй</p>
   </div>
 </div>
 
-<!-- 📩 КОНТАКТЫ - ВНИЗУ -->
+<!-- ✅ ОДНА ГЛАВНАЯ КНОПКА -->
+<div class="cta-container">
+  <a href="products.html" class="btn-main">🛍️ Мои продукты и рекомендации →</a>
+</div>
+
+<!-- ✅ КОНТАКТЫ -->
 <div class="telegram">
-  <p style="font-size:1.1rem;margin-bottom:10px">📩 <strong>Напишите в Direct</strong> для консультаций</p>
+  <p>📩 <strong>Напишите в Direct</strong> для консультаций</p>
   <p>или <a href="https://t.me/Permyakov_Evgeniy">Telegram</a></p>
 </div>
 
