@@ -47,8 +47,7 @@ h1{font-size:2.8rem;margin-bottom:8px;background:linear-gradient(135deg,var(--ac
 .about-section{
   background:rgba(255,255,255,0.06); 
   padding:25px 20px; 
-  border-radius:20px;  margin-bottom:30px; 
-  border:1px solid rgba(255,215,0,0.2); 
+  border-radius:20px;  margin-bottom:30px;   border:1px solid rgba(255,215,0,0.2); 
   text-align:left
 }
 .about-toggle{
@@ -97,8 +96,7 @@ details[open] .arrow{transform:rotate(180deg)}
 .about-block p{font-size:0.92rem;line-height:1.65;opacity:0.9;margin-bottom:10px}
 .about-block ul{list-style:none;padding-left:0}
 .about-block ul li{padding:5px 0 5px 18px;position:relative;font-size:0.92rem;opacity:0.9}.about-block ul li::before{content:'▸';color:var(--accent);position:absolute;left:0}
-.philosophy-quote{
-  background:rgba(139,0,0,0.25);
+.philosophy-quote{  background:rgba(139,0,0,0.25);
   padding:15px;
   border-radius:10px;
   border-left:3px solid var(--accent);
@@ -147,8 +145,7 @@ details[open] .arrow{transform:rotate(180deg)}
   border-color:var(--accent);
   transform:translateY(-3px)}
 .practice-card h3{
-  color:var(--accent);
-  font-size:1.15rem;
+  color:var(--accent);  font-size:1.15rem;
   margin-bottom:10px
 }
 .practice-meta{
@@ -197,8 +194,7 @@ details[open] .arrow{transform:rotate(180deg)}
 /* Главная кнопка */.cta-container{text-align:center;margin:30px 0}
 .btn-main{
   display:inline-block;
-  padding:16px 35px;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  padding:16px 35px;  background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:#fff;
   border:2px solid var(--accent);
   border-radius:50px;
@@ -210,14 +206,44 @@ details[open] .arrow{transform:rotate(180deg)}
 }
 .btn-main:hover{transform:scale(1.04);background:var(--accent);color:var(--primary)}
 
+/* ✅ НОВАЯ КНОПКА: Дыхание с лепестком */
+.game-btn-container{
+  text-align:center;
+  margin:10px 0 25px
+}
+.btn-game{
+  display:inline-block;
+  padding:12px 24px;
+  background:rgba(255,183,197,0.12);
+  border:2px solid var(--sakura);
+  color:var(--text);
+  border-radius:50px;
+  text-decoration:none;
+  font-size:0.95rem;
+  font-weight:500;
+  transition:all 0.3s ease;
+  box-shadow:0 4px 15px rgba(255,183,197,0.15)
+}
+.btn-game:hover{
+  background:rgba(255,183,197,0.25);
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(255,183,197,0.3)
+}
+.game-divider{
+  text-align:center;
+  margin:15px 0;
+  color:var(--sakura);
+  font-size:0.9rem;
+  opacity:0.8
+}
+
 /* Контакты */
 .telegram{
   background:#0088cc;
   color:#fff;
   padding:20px;
   border-radius:18px;
-  margin:30px 0 10px;
-  font-size:0.95rem;
+  margin:30px 0 10px;  font-size:0.95rem;
   border:2px solid rgba(255,255,255,0.15)
 }
 .telegram a{color:#fff;font-weight:700;text-decoration:underline}
@@ -266,7 +292,6 @@ h1{font-size:2.2rem}
       <h3>Меня зовут Ли Вэй</h3>
       <p>Я практикую цигун и Кум Нье более 30 лет — не как эзотерику, а как работу с телом, дыханием и вниманием.</p>
     </div>
-
     <div class="about-block">
       <h3>Как я пришёл к практикам</h3>
       <p>В молодости я искал способ справляться со стрессом <strong>естественным путём</strong>, без сложных теорий. Пробовал разное — от спорта до медитаций. Цигун и тибетская система Кум Нье «зацепили» тем, что работают здесь и сейчас: одно движение, один выдох — и тело само переключается из «тревоги» в «покой».</p>
@@ -292,6 +317,7 @@ h1{font-size:2.2rem}
     </div>
   </div>
 </details>
+
 <!-- ✅ БЛОК: 3 ПРАКТИКИ «ЗДЕСЬ И СЕЙЧАС» -->
 <div class="practices-section">
   <h2>🆓 3 ПРАКТИКИ «ЗДЕСЬ И СЕЙЧАС»</h2>
@@ -315,8 +341,7 @@ h1{font-size:2.2rem}
       </div>
     </div>
 
-    <div class="practice-card">
-      <h3>🔹 Выдох через губы</h3>
+    <div class="practice-card">      <h3>🔹 Выдох через губы</h3>
       <div class="practice-meta">🤢 «Живот вздулся, спазм» • 1–2 мин • Сидя/стоя</div>
       <div class="practice-content">
         <p><strong> Механизм:</strong> Удлинённый выдох активирует блуждающий нерв, переключая тело из «стресса» в «восстановление».</p>
@@ -361,6 +386,11 @@ h1{font-size:2.2rem}
   <a href="products.html" class="btn-main">🛍️ Мои продукты и рекомендации →</a>
 </div>
 
+<!-- ✅ НОВАЯ КНОПКА: Дыхание с лепестком (вставлено здесь) -->
+<div class="game-divider">или попробуй бесплатную практику</div>
+<div class="game-btn-container">
+  <a href="https://genius333.github.io/li-wei-breathing/" class="btn-game">🌸 Дыхание с лепестком — бесплатно</a>
+</div>
 <!-- ✅ КОНТАКТЫ -->
 <div class="telegram">
   <p>📩 <strong>Напишите в Direct</strong> для консультаций</p>
